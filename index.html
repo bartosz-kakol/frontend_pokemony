@@ -3,8 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokemony</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <h1>Pokemony</h1>
+        <input id="search-box" type="text" placeholder="Wyszukaj Pokemony..." data-error="xdxd" />
+        <br/>
+        <span id="search-status"></span>
+        
+        <div id="search-results">
+            
+        </div>
+    </main>
+    
+    <div id="pokemon-dialog" class="dialog" data-show="0">
+        <div>
+            <div class="dialog-header">
+                <img id="pokemon-dialog-thumb" />
+                <h1 id="pokemon-dialog-title"></h1>
+            </div>
+            
+            <div class="dialog-content">
+                <label class="dialog-content-header">Typy:</label>
+                <br/>
+                <label id="pokemon-dialog-types"></label>
+
+                <hr/>
+
+                <label class="dialog-content-header">Statystyki:</label>
+                <br/>
+                <div id="pokemon-dialog-stats"></div>
+
+                <hr />
+
+                <label class="dialog-content-header">Wzrost i waga:</label>
+                <br/>
+                <label id="pokemon-dialog-physical"></label>
+            </div>
+            
+            <div class="dialog-footer">
+                <button onclick="hidePokemonInfoDialog();">Zamknij</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="error-dialog" class="dialog" data-show="0">
+        <div>
+            <div class="dialog-header">
+                <h1>Wystąpił błąd :(</h1>
+            </div>
+
+            <div class="dialog-content">
+                <label>Szczegóły znajdziesz poniżej:</label>
+                <br/>
+                <code id="error-details">
+
+                </code>
+            </div>
+
+            <div class="dialog-footer">
+                <button onclick="hideErrorDialog();">Zamknij</button>
+                <button onclick="location.reload();">Odśwież stronę</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loading-screen">
+        <span>Ładowanie listy Pokemonów...</span>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
