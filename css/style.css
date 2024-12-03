@@ -1,0 +1,111 @@
+@import "base.css";
+@import "dialog.css";
+
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+
+    > span {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+#search-box {
+    border: none;
+    border-radius: 100vw;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    background: #242424;
+    outline: none;
+    width: 300px;
+    
+    &::placeholder {
+        color: #CCC;
+    }
+}
+
+#search-status[data-error="1"] {
+    color: #F44336;
+}
+
+#search-results {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+
+    > .pokemon-details {
+        display: grid;
+        grid-template-areas:
+        "thumb title"
+        "thumb num";
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: 1fr auto;
+        width: 100%;
+        height: 120px;
+        border-radius: 20px;
+        background: #363636;
+        cursor: pointer;
+
+        * {
+            cursor: inherit;
+        }
+        
+        &:hover {
+            background: #414141;
+        }
+
+        > img {
+            grid-area: thumb;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
+
+        > label.pokemon-title {
+            grid-area: title;
+            margin: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            word-break: break-all;
+        }
+
+        > label.pokemon-num {
+            grid-area: num;
+            margin: 5px 10px 5px 5px;
+            font-size: 14px;
+            color: #999;
+            text-align: right;
+        }
+    }
+}
+
+#pokemon-dialog-title {
+    margin-right: 40px;
+}
+
+#pokemon-dialog-thumb {
+    width: 120px;
+    height: 120px;
+}
+
+#pokemon-dialog-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+#pokemon-dialog-stats > div {
+    background: #fff1;
+    padding: 4px 6px;
+    border-radius: 8px;
+}

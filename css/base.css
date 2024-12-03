@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    background: #121212;
+    color: #FEFEFE;
+    font-family: sans-serif;
+}
+
+input {
+    color: inherit;
+}
+
+main {
+    margin: auto;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    outline: none;
+    background: #666;
+    color: inherit;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 250ms;
+
+    &:hover {
+        background: #777;
+    }
+
+    &:active {
+        background: #555;
+    }
+}

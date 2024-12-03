@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokemony</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
@@ -43,7 +43,7 @@
             </div>
             
             <div class="dialog-footer">
-                <button onclick="hidePokemonInfoDialog();">Zamknij</button>
+                <button onclick="PokemonDialog.hide();">Zamknij</button>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
             </div>
 
             <div class="dialog-footer">
-                <button onclick="hideErrorDialog();">Zamknij</button>
+                <button onclick="ErrorDialog.hide();">Zamknij</button>
                 <button onclick="location.reload();">Odśwież stronę</button>
             </div>
         </div>
